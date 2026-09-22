@@ -1,0 +1,160 @@
+AI RETAIL PRICING ANALYTICS REPORT
+======================================================================
+
+# E-Commerce Retail Analytics Report
+
+---
+
+## 1. Executive Summary
+
+This report evaluates historical retail performance across key product categories including **bed_bath_table**, **garden_tools**, **health_beauty**, **computers_accessories**, **watches_gifts**, **furniture_decor**, **cool_stuff**, **consoles_games**, and **perfumery**. 
+
+The portfolio demonstrates distinct performance clusters:
+- **Top Revenue Drivers:** Specific high-performing SKUs in *watches_gifts* (`watches6`), *bed_bath_table* (`bed5`), *computers_accessories* (`computers6`), and *health_beauty* (`health2`) generate substantial single-month revenues, frequently exceeding 5,000.00 to 12,000.00.
+- **Volume Hubs:** Peak seasonal demand occurs around late Q4 (November–December) and Q1/Q2 promotional windows, with items like `furniture2` reaching 122 units in a month and `watches6` achieving 114 units.
+- **Pricing Polarization:** Significant divergence exists across pricing flags. Items flagged as **Potentially High** (e.g., `health5` with variance percentages up to 570.0619745965515%) frequently sustain strong sales volume, while items classified as **Revenue Opportunity** with **Potentially Low** flags (e.g., `bed1`, `health9`, `watches3`) show steady volume at deeply discounted relative price levels.
+- **Strategic Focus:** Immediate operational reviews should target low performers burdened by high-price flags (`garden3`, `garden5`), volume drop-offs in previously active SKUs (`cool3`, `consoles1`), and monetization reviews for underpriced high-demand products.
+
+---
+
+## 2. Revenue Insights
+
+The dataset exhibits distinct revenue milestones and trajectories across categories:
+
+* **Top Individual Monthly Revenue Milestones:**
+  * `bed5` (*bed_bath_table*): Generated **12095.0** in 01-07-2017 (59 units) and **10374.5098028** in 01-08-2017 (52 units).
+  * `watches6` (*watches_gifts*): Recorded **11832.3476676** in 01-05-2018 (114 units) and **8980.133125** in 01-04-2018 (85 units).
+  * `computers6` (*computers_accessories*): Reached **10343.1** in 01-02-2018 (69 units), **7794.8** in 01-05-2018 (52 units), and **7644.900000000001** in 01-03-2018 (51 units).
+  * `health2` (*health_beauty*): Sustained high monthly revenue across 2018, generating **9240.0** in 01-08-2018 (28 units), **9124.9999988** in 01-03-2018 (28 units), and **7475.0** in 01-02-2018 (23 units).
+  * `furniture2` (*furniture_decor*): Peaked at **8539.4299062** in 01-01-2018 (122 units) and **6430.8** in 01-05-2018 (92 units).
+
+* **Category Revenue Profiles:**
+  * **watches_gifts:** Exceptionally consistent high-revenue generation across multiple SKUs (`watches1`, `watches2`, `watches4`, `watches5`, `watches6`, `watches7`, `watches8`), with several records exceeding 3,000.00 to 6,000.00 per month.
+  * **health_beauty:** Broad spectrum ranging from low unit-value products (`health4` with monthly revenues under 700.00) to high-ticket/high-margin items (`health2`, `health5`) that consistently exceed 3,000.00 to 5,000.00 monthly.
+  * **consoles_games:** The lowest revenue-generating category in the portfolio; individual monthly sales for `consoles1` and `consoles2` never exceeded **686.0** (01-11-2017) and **563.5** (01-11-2017), respectively.
+
+---
+
+## 3. Demand Insights
+
+Demand dynamics show significant variance in unit velocity across periods and product lines:
+
+* **High-Volume Anchors:**
+  * `furniture2`: Achieved the highest single-month quantity in the dataset with **122 units** in 01-01-2018 (revenue: 8539.4299062), followed by **92 units** in 01-05-2018.
+  * `watches6`: Surged to **114 units** in 01-05-2018 and **85 units** in 01-04-2018.
+  * `garden6`, `garden9`, `garden10`: Experienced dramatic seasonal demand spikes in **November 2017**:
+    * `garden6`: 91 units (revenue: 4769.03194404)
+    * `garden10`: 87 units (revenue: 4667.40046875)
+    * `garden9`: 82 units (revenue: 4377.08656736)
+  * `computers2`: Scaled to **71 units** in 01-02-2018 (revenue: 5588.5719297).
+  * `cool3`: Recorded an isolated volume surge of **76 units** in 01-01-2018 (revenue: 2242.0).
+
+* **Demand Contractions and Volatility:**
+  * `cool3`: After peaking at 76 units in 01-01-2018, collapsed to 26 units in 01-03-2018, 4 units in 01-04-2018, and finished at 1 unit in 01-08-2018 (revenue: 65.0).
+  * `consoles1`: Contracted from peak levels of 28 units in October/November 2017 down to 1 unit in 01-07-2018 (revenue: 36.2).
+  * `health1`: Peaked in Q4 2017 (36 units in November, 50 units in December), but dropped to 2 units by 01-06-2018 (revenue: 169.98).
+  * `garden5`: Fell from 20 units in 01-05-2017 and 17 units in 01-11-2017 to single-unit sales (1 unit each in 01-03-2018 and 01-04-2018).
+
+---
+
+## 4. Pricing Insights
+
+The pre-calculated `variance_pct` and `price_flag` classifications outline distinct pricing environments:
+
+* **Products Flagged as "Within Range":**
+  * Multiple high performers maintain zero or minimal variance from benchmark pricing:
+    * `garden4`: Consistently flagged **Within Range** across all periods, with variance percentages between -0.6298349749033868% and 0.9485698033243204% (0.0% across 9 separate months).
+    * `garden9` and `garden10`: Similarly anchored **Within Range** throughout 2017 and 2018 with variances near 0.0%.
+    * `computers3`: Stable within range with minor variations (-3.9015198720051703% to 5.640102398290462%).
+
+* **Products Flagged as "Potentially High":**
+  * `health5`: Exhibits massive positive variance percentages, including **570.0619745965515%** in 01-06-2018 and 01-07-2018, and **558.619174405344%** in 01-08-2018.
+  * `health2`: Sustained variance percentages above **460% to 507.4737681781923%** throughout late 2017 and 2018 while maintaining high demand (13 to 28 units monthly).
+  * `garden8`: Variance percentages consistently above **178.5385077817113%**, peaking at **276.4614943887776%** in 01-01-2018.
+  * `garden3`: Escalated from 0.0% variance (01-02-2017 to 01-04-2017) to **147.1576486973948%** in 01-01-2018.
+
+* **Products Flagged as "Potentially Low":**
+  * `bed1`: Consistently flagged **Potentially Low** across every recorded month, with negative variance percentages ranging from -60.70970500213766% (01-05-2017) to -22.79643231899266% (01-08-2018).
+  * `health9`: Stays heavily discounted against benchmark, with negative variances ranging from -42.86939125464419% to -65.72555295193462%.
+  * `watches3`: Continuously discounted with variances between -31.443392392778463% and -47.461775073531065%.
+
+---
+
+## 5. Pricing Alerts and Risks
+
+| Product ID | Category | Validated Price Flag | Observed Variance Range (%) | Business Risk Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **health5** | health_beauty | Potentially High | +37.25% to +570.06% | Extreme upward price divergence. While volume is stable (9–17 units), severe pricing premiums expose the SKU to sudden competitive undercut. |
+| **health2** | health_beauty | Potentially High | +111.10% to +507.47% | High revenue concentration at elevated price variance. Customer acquisition may be vulnerable if alternatives emerge. |
+| **garden3** | garden_tools | Potentially High | +43.60% to +147.16% | Classified as **Low Performer**; steady price escalation correlates with volume decay from 21 units (11-2017) to 2 units (08-2018). |
+| **garden5** | garden_tools | Potentially High | +27.87% to +99.60% | Classified as **Low Performer**; as price variance climbed near +100%, monthly sales collapsed to 1 unit in 03-2018 and 04-2018. |
+| **bed1** | bed_bath_table | Potentially Low | -22.80% to -60.71% | Severe underpricing across 16 consecutive months. Fails to capture standard category margins despite steady volume. |
+| **health9** | health_beauty | Potentially Low | -42.87% to -65.73% | Sustained negative variance; volume has declined from 29 units (07-2017) to 2 units (08-2018), failing to drive growth despite deep discounting. |
+| **computers5**| computers_acc. | Potentially Low | -21.44% to -38.70% | Classified as **Low Performer**; heavy negative variance did not sustain sales after a brief surge in Jan/Feb 2018, falling to 3 units. |
+
+---
+
+## 6. Product Performance
+
+The portfolio is segmented by the validated `performance_class`:
+
+### High Performer
+- **`health2` & `health5`:** Core profitability engines in *health_beauty*. Maintained high unit sales (up to 28 and 17 units monthly) despite positive price variances above 450%.
+- **`computers6`:** Dominant technology SKU, generating over 10,343.1 in single-month revenue (01-02-2018) with positive price variances (+11.5% to +31.0%).
+- **`watches6`:** High-volume gift item peaking at 114 units and 11,832.35 revenue (01-05-2018).
+- **`bed2`:** Strong home category staple, maintaining steady volume across varying price flags (Within Range, Potentially Low, Potentially High).
+- **`garden4`, `garden6`, `garden9`, `garden10`:** Reliable volume generators for garden tools, dominating the Q4 holiday surge with minimal price deviations.
+
+### Revenue Opportunity
+- **`bed1`:** Stable monthly demand (up to 19 units) with chronic negative variance (-60.7% to -22.8%). Represents margin expansion potential if pricing is normalized.
+- **`health6`:** Scaled from 3 units (revenue: 185.97) in 01-01-2018 to 38 units (revenue: 2469.62) in 01-05-2018 and 28 units (revenue: 1875.72) in 01-08-2018, transitioning into Potentially High pricing.
+- **`health7`:** Consistent volume across 2017 (peaking at 25 units), but tapered down in 2018 (2 units in 07-2018, 3 units in 08-2018).
+- **`watches3`:** Reached 40 units in 01-07-2018 (revenue: 3120.0) while flagged Potentially Low (-38.15473330724126%), indicating high price sensitivity or uncaptured margin.
+- **`furniture1`:** Frequent negative variances (-24.1% to -53.3%) with volume fluctuating between 1 and 28 units.
+
+### High-Value / Lower Volume
+- **`cool4`:** Premium cool stuff SKU reaching peak revenue of 4,842.71 in 12-2017 with variance at +26.20%, maintaining lower volumes (1 to 29 units).
+- **`garden8`:** Exceptional price resilience with variances up to +276.46% and steady monthly demand of 7 to 15 units between late 2017 and mid-2018.
+- **`watches7` & `watches8`:** High unit-value watches with substantial price premiums (+18% to +149.6%), delivering strong revenue spikes (e.g., `watches7` generating 7,620.72 from 45 units in 07-2018).
+- **`computers3` & `cool2`:** Steady, low-to-moderate quantity profiles with revenue per unit well above catalog averages.
+
+### Low Performer
+- **`garden3`, `garden5`, `garden7`, `garden2`:** Trailing garden products. `garden3` and `garden5` saw severe volume erosion as price variance climbed.
+- **`cool1`, `cool3`, `cool5`:** Highly irregular demand patterns; `cool3` suffered sharp volume decay after January 2018.
+- **`consoles1`, `consoles2`:** Consistently low unit revenues and declining velocity across 2018.
+- **`perfumery1`, `perfumery2`:** Modest revenue contributions; `perfumery1` remains discounted (Potentially Low) with weak momentum.
+
+---
+
+## 7. Business Recommendations
+
+### Areas to Investigate
+1. **Margin Recapture on "Revenue Opportunity" SKUs:**
+   - Investigate price elasticity for `bed1`, `watches3`, and `health10`. These products maintain solid transaction volumes despite large negative variance percentages (-20% to -60%).
+   - Review competitor pricing benchmarks to determine if discounts are driving essential volume or unnecessarily eroding margin.
+
+2. **Demand Destruction in "Low Performer" SKUs with "Potentially High" Flags:**
+   - Audit `garden3` and `garden5`. Both items experienced steep volume declines (collapsing to 1–2 units monthly) as their price variances exceeded +80% to +140%. 
+   - Analyze whether aggressive price increases directly choked off conversion rates.
+
+3. **Post-Surge Drop-Offs:**
+   - Investigate the root cause behind sharp volume drop-offs for `cool3` (from 76 units in 01-2018 to 1 unit in 08-2018) and `computers5` (from 57 units in 01-2018 to 3 units in 07-2018). Determine whether these were inventory stock-outs, post-holiday demand cliffs, or lost Buy Box status.
+
+### Areas to Monitor
+1. **Premium Positioning Sustainability for Top Health Performers:**
+   - Closely monitor customer satisfaction, return rates, and competitor entry for `health2` and `health5`. Both generate large revenue shares while operating at extreme positive variance levels (+450% to +570%).
+2. **Q4 Seasonal Preparation:**
+   - Set up advance inventory tracking for `garden6`, `garden9`, `garden10`, and `watches5` beginning in Q3. Historical data reveals massive concentration of sales volume during November and December.
+3. **Consoles and Gaming Portfolio Trajectory:**
+   - Monitor `consoles1` and `consoles2` viability. With quantities falling to single digits (1 to 6 units per month in mid-2018) and low revenue contribution, assess whether these listings warrant continued merchandising support.
+
+---
+
+## 8. Management Summary
+
+| Metric / Dimension | Observation from Data | Strategic Implication |
+| :--- | :--- | :--- |
+| **Top Revenue SKUs** | `bed5`, `watches6`, `computers6`, `health2` (Revenues > 9,000–12,000/mo) | Protect core revenue drivers; safeguard supply chain and listing health. |
+| **Underpriced Volume** | `bed1`, `watches3`, `health9` flagged as **Revenue Opportunity** with negative variance | High potential to recover gross margin through systematic price testing. |
+| **At-Risk Products** | `garden3`, `garden5`, `cool3`, `consoles1` showing severe volume contraction | Re-evaluate product viability, competitive market alignment, and listing vitality. |
+| **Seasonality Trend** | High spikes across Garden Tools and Watches in Nov/Dec; early-year surges in Furniture | Align working capital and inventory stocking to sharp Q4/Q1 demand cycles. |
